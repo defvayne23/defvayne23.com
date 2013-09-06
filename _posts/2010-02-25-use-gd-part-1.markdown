@@ -1,0 +1,141 @@
+---
+author: admin
+comments: true
+date: 2010-02-25 16:29:16+00:00
+layout: post
+slug: use-gd-part-1
+title: 'Use GD: Part 1 - Crop Image'
+category: Code
+tags:
+- GD
+- PHP
+- Tutorial
+---
+
+This is the first in a series of accepting a users image, selecting the area, and cropping it. First we will start with the guts of the process and build on top of that.
+
+When letting users upload images for a site, you normally would like the images to be the same ratio and size. To do this we need to crop the image. To get things started lets select the image.
+
+![](/images/posts/use-gd-part-1/image1.jpg)
+
+Now that we have the image we need to load the image into GD before we can do anything with it. You can find all the GD functions we use [here](http://us.php.net/manual/en/ref.image.php).
+
+<!-- /excerpt -->
+
+{% highlight php %}
+// Set image info
+$sFile = "image.jpg";
+$aInfo = getimagesize($sFile); //Get info on the image like width, height, and type
+list($sWidth, $sHeight, $sType) = $aInfo; //Pull the info from the $aInfo array
+
+// Load image
+switch($sType)
+{
+	case IMAGETYPE_GIF: $oImage = imagecreatefromgif($sFile); break;
+	case IMAGETYPE_JPEG: $oImage = imagecreatefromjpeg($sFile); break;
+	case IMAGETYPE_PNG: $oImage = imagecreatefrompng($sFile); break;
+	default: die("Image type not found");
+}
+{% endhighlight %}
+
+[Learn about list().](http://us.php.net/list)
+
+We start things off in the above code by getting info on the image. We will need to know the current image size later. Then load the image into GD based on image type.
+
+Now that we have the image in GD we need to select the area we want to keep of the image. If you are letting the user crop an image I suggest either [Jcrop](http://deepliquid.com/content/Jcrop.html) or [Cropper UI](http://www.defusion.org.uk/code/javascript-image-cropper-ui-using-prototype-scriptaculous/). What we use from the cropper is the offset x & y, and the selected area width and height.
+
+![](/images/posts/use-gd-part-1/image3.jpg)
+
+{% highlight php %}
+$sCropOffsetX = 148;
+$sCropOffsetY = 119;
+$sCropWidth = 350;
+$sCropHeight = 275;
+{% endhighlight %}
+
+With our selector info we will start off by creating an image object with the new width and height. This will create our new canvas. After we create the canvas I always change the canvas color to white because the default is black (no color). Now we have everything we need. Now all we have to do is place the original image over the new canvas and everything that doesn't fit gets cut off and removed. Once we are done cropping we can delete the original image, this frees up memory.
+
+{% highlight php %}
+$oCrop = imagecreatetruecolor($sCropWidth, $sCropHeight); //Create image object with the width and height of the selected area.
+imagefill(
+	$oCrop, //Our selected area object we just created
+	0, 0, //Position to start filling the image
+	imagecolorallocate($oCrop, 255, 255, 255) //Create the color white for the background to use in our selected area object
+);
+
+// Crop image onto canvas
+imagecopyresized(
+	$oCrop, //New image
+	$oImage, //Original image
+	0, 0, //Position to place original
+	$sCropOffsetX, $sCropOffsetY, //Position to place selected area ($oCrop)
+	$sWidth, $sHeight, $sWidth, $sHeight //We are not actually resizing the image, so we pass the current width and height for both source and destination
+);
+imagedestroy($oImage);
+{% endhighlight %}
+
+As you can see in the image below, everything that is washed out is what gets removed.
+
+![](/images/posts/use-gd-part-1/image4.jpg)
+
+Now we have our image, it's time to pass the results to the user. First we must tell the user's browser what type of image we are passing it, then pass the image based on type. Don't forget to destroy the image to clean up the memory.
+
+{% highlight php %}
+$sMime = image_type_to_mime_type($aInfo);
+header("Content-type: ".$sMime); //Tells the browser what type of info we are sending it
+
+switch($sType)
+{
+	case IMAGETYPE_JPEG: imagejpeg($oCrop); break;
+	case IMAGETYPE_PNG: imagepng($oCrop); break;
+	case IMAGETYPE_GIF: imagegif($oCrop); break;
+	default: die("Image type not found");
+}
+imagedestroy($oCrop);
+{% endhighlight %}
+
+That's all there is too it.
+
+![](/images/posts/use-gd-part-1/image5.jpg)
+
+{% highlight php %}
+// Set image info
+$sFile = "image.jpg";
+$aInfo = getimagesize($sFile);
+list($sWidth, $sHeight, $sType) = $aInfo;
+
+// Load image
+switch($sType)
+{
+	case IMAGETYPE_GIF: $oImage = imagecreatefromgif($sFile); break;
+	case IMAGETYPE_JPEG: $oImage = imagecreatefromjpeg($sFile); break;
+	case IMAGETYPE_PNG: $oImage = imagecreatefrompng($sFile); break;
+	default: die("Image type not found");
+}
+
+$sCropOffsetX = 148;
+$sCropOffsetY = 119;
+$sCropWidth = 350;
+$sCropHeight = 275;
+
+$oCrop = imagecreatetruecolor($sCropWidth, $sCropHeight);
+imagefill($oCrop, 0, 0, imagecolorallocate($oCrop, 255, 255, 255));
+
+// Crop image onto canvas
+imagecopyresized($oCrop, $oImage, 0, 0, $sCropOffsetX, $sCropOffsetY, $sWidth, $sHeight, $sWidth, $sHeight);
+imagedestroy($oImage);
+
+$sMime = image_type_to_mime_type($aInfo);
+header("Content-type: ".$sMime);
+
+switch($sType)
+{
+	case IMAGETYPE_JPEG: imagejpeg($oCrop); break;
+	case IMAGETYPE_PNG: imagepng($oCrop); break;
+	case IMAGETYPE_GIF: imagegif($oCrop); break;
+	default: die("Image type not found");
+}
+imagedestroy($oCrop);
+{% endhighlight %}
+
+Once we have the image, why should we have to re-create it for the next call? That is for another post. We will cover storing the file, and using headers to allow the header to cache the file.

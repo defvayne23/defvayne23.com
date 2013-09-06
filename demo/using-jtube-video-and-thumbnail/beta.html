@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Using jTube - Video and Thumbnail </title>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+	
+	<style type="text/css">
+	body {
+		background: #9F9F9F;
+		font-size: 15px;
+	}
+	#container {
+		width: 720px;
+		margin: 0 auto;
+	}
+	#myVideos {
+		background: ;
+	}
+	.videos {
+		background: #fff;
+		list-style: none;
+		margin: 0;
+		margin-bottom: 20px;
+		padding: 15px;
+		height: 700px;
+		overflow: hidden;
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+		border-radius: 10px;
+	}
+	.videos li {
+		float: left;
+		border: 1px solid #B6B6B6;
+		width: 205px;
+		height: 210px;
+		margin: 0 10px 10px 0;
+		padding: 5px;
+	}
+	nav {
+		display: block;
+		text-align: center;
+	}
+	a {
+		text-decoration: none;
+		color: #333;
+	}
+	a.disabled {
+		color: #CCC;
+		cursor:default;
+	}
+	</style>
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="jquery.jTube.js" charset="utf-8"></script>
+
+	<script type="text/javascript">
+	var currentPage = 1;
+	var options = {
+		feed: 'top_rated',
+		limit: 9,
+		page: currentPage,
+		success: function(videos, numberPages) {
+			$('#myVideos').html('');
+			$('#currentPage').html(currentPage);
+			$('#numberPages').html(numberPages);
+			
+			$(videos).each(function(index) {
+				videoHTML = '<li>';
+				
+				if(index == 0) {
+					videoHTML += $.jTubeEmbed(this.video, {width: 200, height: 172});
+					videoHTML += this.title;
+				} else {
+					videoHTML += '<a href="'+this.link+'" target="_blank">';
+					videoHTML += this.title;
+					videoHTML += '</a> - '+this.length;
+				}
+				
+				videoHTML += '</li>';
+				
+				$('#myVideos').append(videoHTML);
+			});
+			
+			//Back
+			if(currentPage != 1) {
+				$('#pageBack').removeClass('disabled').unbind('click').click(function(event) {
+					currentPage = currentPage - 1;
+					options.page = currentPage;
+					$.jTube(options);
+					event.preventDefault();
+				});
+			} else {
+				$('#pageBack').addClass('disabled').unbind('click').click(empty);
+			}
+			
+			//Next
+			if(currentPage < numberPages) {
+				$('#pageNext').removeClass('disabled').unbind('click').click(function(event) {
+					currentPage = currentPage + 1;
+					options.page = currentPage;
+					$.jTube(options);
+					event.preventDefault();
+				});
+			} else {
+				$('#pageNext').addClass('disabled').unbind('click').click(empty);
+			}
+		},
+		error: function(error) {
+			$('#myVideos').append('<li class="error">'+error+'</li>');
+		}
+	};
+	var empty = function(event) {event.preventDefault();};
+	
+	$("#pageBack, #pageNext").click(empty);
+	$.jTube(options);
+	</script>
+</head>
+<body>
+<div id="container">
+	<ul id="myVideos" class="videos"></ul>
+	<nav>
+		<a href="" id="pageBack" class="disabled">Back</a> - Page <span id="currentPage">1</span> of <span id="numberPages">1</span> - <a href="" id="pageNext" class="disabled">Next</a>
+	</nav>
+</div>
+</body>
+</html>

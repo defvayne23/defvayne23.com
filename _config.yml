@@ -1,0 +1,40 @@
+name: John Hoover - defvayne23.com
+markdown: redcarpet
+pygments: true
+exclude: [node_modules]
+permalink: /:year/:month/:day/:title
+excerpt_separator: <!-- /excerpt -->
+social:
+- name: Flickr
+  url: http://www.flickr.com/photos/defvayne23/
+  image: /images/social/flickr_32.png
+- name: Last-FM
+  url: http://www.last.fm/user/defvayne23
+  image: /images/social/lastfm_32.png
+- name: Pandora
+  url: http://www.pandora.com/people/defvayne23
+  image: /images/social/pandora_32.png
+- name: Twitter
+  url: http://twitter.com/defvayne23
+  image: /images/social/twitter_32.png
+- name: Facebook
+  url: http://www.facebook.com/defvayne23
+  image: /images/social/facebook_32.png
+- name: Linkedin
+  url: http://www.linkedin.com/pub/john-hoover/21/172/4a2
+  image: /images/social/linkedin_32.png
+- name: Stack Overflow Careers
+  url: http://careers.stackoverflow.com/wjh
+  image: /images/social/careers_32.png
+- name: Google
+  url: https://profiles.google.com/defvayne23
+  image: /images/social/google_32.png
+- name: Tumblr
+  url: http://defvayne23.tumblr.com/
+  image: /images/social/tumblr_32.png
+- name: Vimeo
+  url: http://vimeo.com/defvayne23
+  image: /images/social/vimeo_32.png
+- name: GitHub
+  url: http://github.com/defvayne23
+  image: /images/social/github_32.png
