@@ -76,20 +76,22 @@ h2 {
 
 @media #{$medium} {
 	#navigation {
+		position: absolute;
 		width: 235px;
 		margin-bottom: 0;
     	padding-right: 20px;
     	border-right: 1px solid $body-font-color;
     	border-bottom: none;
+    	.avatar {
+			position: absolute;
+			top: 0;
+			left: -90px;
+			width: 80px;
+		}
     	#social {
     		position: static;
     		width: auto;
     	}
-	}
-	@media #{$h-small} {
-		#navigation {
-			position: absolute;
-		}
 	}
 
 	@media #{$h-medium} {
