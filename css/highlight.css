@@ -5,11 +5,18 @@ based on dark.css by Ivan Sagalaev
 
 */
 
-pre code {
-  display: block; padding: 0.5em;
+code {
   background: #3F3F3F;
   color: #DCDCDC;
+  white-space: nowrap;
+  padding: 0.3em;
+}
+
+pre code {
+  display: block; padding: 0.5em;
   overflow: auto;
+  white-space: normal;
+  padding: 0.5em;
 }
 
 pre .keyword,
