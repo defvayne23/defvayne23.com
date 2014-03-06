@@ -11,6 +11,16 @@ h1 {
 h2 {
 	margin: 0 0 20px;
     color: #85B4DE;
+    a {
+    	color: #85B4DE;
+    }
+}
+
+h3 {
+    color: #85B4DE;
+    a {
+    	color: #85B4DE;
+    }
 }
 
 .container {
@@ -42,20 +52,28 @@ h2 {
 	margin-bottom: 20px;
 	padding-bottom: 20px;
 	border-bottom: 1px solid $body-font-color;
+	.avatar {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 50px;
+	}
+	h1, h2 {
+		margin-left: 60px;
+	}
 	ul {
 		margin: 0;
 		padding: 0;
 		list-style: none;
-		.heading {
-			text-transform: uppercase;
-			color: #85B4DE;
-		}
 		li {
 			margin-bottom: 5px;
 		}
 	}
 	#social {
-		@extend .hide-for-small;
+		position: absolute;
+		width: 212px;
+		right: 0;
+		bottom: 20px;
 		margin-top: 20px;
 		img {
 			margin-bottom: 2px;
@@ -65,11 +83,13 @@ h2 {
 
 @media #{$small} {
 	#navigation {
+		.avatar {
+			width: 80px;
+		}
+		h1, h2 {
+			margin-left: 90px;
+		}
 		#social {
-			position: absolute;
-			width: 68px;
-			right: 0;
-			bottom: 20px;
 		}
 	}
 }
@@ -80,17 +100,17 @@ h2 {
 		width: 235px;
 		margin-bottom: 0;
     	padding-right: 20px;
-    	border-right: 1px solid $body-font-color;
+    	// border-right: 1px solid $body-font-color;
     	border-bottom: none;
-    	.avatar {
-			position: absolute;
-			top: 0;
-			left: -90px;
+		.avatar {
+			top: -80px;
 			width: 80px;
+		}
+		h1, h2 {
+			margin-left: 0;
 		}
     	#social {
     		position: static;
-    		width: auto;
     	}
 	}
 
