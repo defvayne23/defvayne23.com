@@ -5901,6 +5901,17 @@ h3 a {
   margin-left: 50px;
 }
 
+@media only screen and (min-width: 880px) {
+  #content {
+    width: 600px;
+    left: 255px;
+  }
+}
+@media only screen and (min-width: 1220px) {
+  #content {
+    width: 950px;
+  }
+}
 .category {
   padding: 10px;
   margin-bottom: 20px;
@@ -5921,6 +5932,9 @@ h3 a {
   background: rgba(255, 255, 0, 0.3);
 }
 
+.post_container {
+  overflow: hidden;
+}
 .post_container .post_details {
   overflow: hidden;
   margin-bottom: 20px;
@@ -5936,18 +5950,52 @@ h3 a {
   padding-left: 10px;
   border-left: 1px solid #5797CF;
 }
+.post_container .post_image {
+  width: 100%;
+  margin-bottom: 15px;
+}
 
-@media only screen and (min-width: 880px) {
-  #content {
-    width: 600px;
-    left: 255px;
+@media only screen and (min-width: 500px) {
+  .post_container .post_image {
+    width: auto;
+    max-width: 300px;
+    float: left;
+    margin: 0 15px 15px 0;
   }
 }
-@media only screen and (min-width: 1220px) {
-  #content {
-    width: 950px;
-  }
+.pagination {
+  overflow: hidden;
+  width: 300px;
+  margin: 30px auto 20px;
 }
+.pagination a {
+  display: block;
+  background: #d4ebff;
+  color: #3f3f3f;
+  width: 100px;
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 10px;
+}
+.pagination a.disabled {
+  cursor: default;
+  opacity: 0.2;
+}
+.pagination a.disabled:hover {
+  cursor: default;
+  text-decoration: none;
+  background: #d4ebff;
+}
+.pagination a:hover {
+  text-decoration: underline;
+}
+.pagination .older {
+  float: left;
+}
+.pagination .newer {
+  float: right;
+}
+
 .archive .archive_year {
   border-left: 1px solid #296AA3;
   margin-left: 10px;

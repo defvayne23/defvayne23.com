@@ -165,6 +165,19 @@ h3 {
 	}
 }
 
+@media #{$medium} {
+	#content {
+		width: 600px;
+		left: 255px;
+	}
+}
+
+@media #{$large} {
+	#content {
+		width: 950px;
+	}
+}
+
 .category {
 	padding: 10px;
 	margin-bottom: 20px;
@@ -186,6 +199,7 @@ h3 {
 }
 
 .post_container {
+	overflow: hidden;
 	.post_details {
 		overflow: hidden;
 		margin-bottom: 20px;
@@ -201,28 +215,37 @@ h3 {
 			border-left: 1px solid #5797CF;
 		}
 	}
+	.post_image {
+		width: 100%;
+		margin-bottom: 15px;
+	}
 }
 
 @media #{$small} {
-	#content {
+	.post_container {
+		.post_image {
+			width: auto;
+			max-width: 300px;
+			float: left;
+			margin: 0 15px 15px 0;
+		}
 	}
 }
 
 @media #{$medium} {
-	#content {
-		width: 600px;
-		left: 255px;
-	}
+
 }
 
 @media #{$large} {
-	#content {
-		width: 950px;
+
+}
+
 .archive {
 	.archive_year {
 		border-left: 1px solid #296AA3;
 		margin-left: 10px;
 		padding-left: 15px;
+	}
 	.archive_month {
 		margin-left: 10px;
 	}
