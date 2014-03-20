@@ -1,0 +1,53 @@
+---
+layout: default
+title : Archive - John Hoover - Defvayne23.com
+---
+<h3>Archive</h3>
+
+{% assign posts_collate = site.posts %}
+
+{% for post in posts_collate  %}
+  {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+  {% capture this_month %}{{ post.date | date: "%B" }}{% endcapture %}
+  {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
+  {% capture next_month %}{{ post.previous.date | date: "%B" }}{% endcapture %}
+
+  {% if forloop.first %}
+    <div class="archive">
+      <h4>{{this_year}}</h4>
+      <div class="archive_year">
+        <h5>{{this_month}}</h5>
+        <div class="archive_month">
+          <ul>
+  {% endif %}
+            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% if forloop.last %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  {% else %}
+    {% if this_year != next_year %}
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="archive">
+      <h4>{{next_year}}</h4>
+      <div class="archive_year">
+        <h5>{{next_month}}</h5>
+        <div class="archive_month">
+          <ul>
+    {% else %}
+      {% if this_month != next_month %}
+          </ul>
+        </div>
+        <h5>{{next_month}}</h5>
+        <div class="archive_month">
+          <ul>
+      {% endif %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+{% assign posts_collate = null %}

@@ -218,6 +218,13 @@ h3 {
 @media #{$large} {
 	#content {
 		width: 950px;
+.archive {
+	.archive_year {
+		border-left: 1px solid #296AA3;
+		margin-left: 10px;
+		padding-left: 15px;
+	.archive_month {
+		margin-left: 10px;
 	}
 }
 

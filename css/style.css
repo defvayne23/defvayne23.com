@@ -5948,6 +5948,15 @@ h3 a {
     width: 950px;
   }
 }
+.archive .archive_year {
+  border-left: 1px solid #296AA3;
+  margin-left: 10px;
+  padding-left: 15px;
+}
+.archive .archive_month {
+  margin-left: 10px;
+}
+
 .highlight {
   margin-bottom: 1.25em;
 }
