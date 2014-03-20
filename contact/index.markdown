@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Contact - John Hoover - Defvayne23.com
+title: Contact
 ---
 ###Contact
 

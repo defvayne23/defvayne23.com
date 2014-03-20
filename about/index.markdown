@@ -1,6 +1,6 @@
 ---
 layout: default
-title: About - John Hoover - Defvayne23.com
+title: About
 ---
 ###About John
 

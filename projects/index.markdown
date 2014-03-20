@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Projects - John Hoover - Defvayne23.com
+title: Projects
 ---
 ### Projects
 
