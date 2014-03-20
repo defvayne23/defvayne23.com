@@ -240,6 +240,39 @@ h3 {
 
 }
 
+.pagination {
+	overflow: hidden;
+	width: 300px;
+	margin: 30px auto 20px;
+	a {
+		display: block;
+		background: $body-font-color;
+		color: #3f3f3f;
+		width: 100px;
+		text-align: center;
+		padding: 10px 0;
+		border-radius: 10px;
+		&.disabled {
+			cursor: default;
+			opacity: 0.2;
+			&:hover {
+				cursor: default;
+				text-decoration: none;
+				background: $body-font-color;
+			}
+		}
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	.older {
+		float: left;
+	}
+	.newer {
+		float: right;
+	}
+}
+
 .archive {
 	.archive_year {
 		border-left: 1px solid #296AA3;

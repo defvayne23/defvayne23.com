@@ -5,7 +5,7 @@ title: John Hoover - Defvayne23.com
 
 <div id="home">
 	<ul class="posts">
-		{% for post in site.posts %}
+		{% for post in paginator.posts %}
 			<li class="post">
 				{% if post.category != empty %}<div class="category {{ post.category | downcase }}"><div>{{ post.category }}</div></div>{% endif %}
 				<div class="post_container">
@@ -17,9 +17,22 @@ title: John Hoover - Defvayne23.com
 						{% endif %}
 						<div class="comments"><a href="{{ post.url }}#disqus_thread">0 Comments</a></div>
 					</div>
+					{% if post.image != nil %}<a href="{{ post.url }}"><img src="{{ post.image }}" alt="{{ post.title }}" class="post_image"></a>{% endif %}
 					<div class="post_excerpt">{{ post.excerpt }}</div>
 				</div>
 			</li>
 		{% endfor %}
 	</ul>
+	<div class="pagination">
+		{% if paginator.previous_page != nil %}
+			<a href="{{ paginator.previous_page_path }}" class="older">Older</a>
+		{% else %}
+			<a href="#" class="older disabled">Older</a>
+		{% endif %}
+		{% if paginator.next_page != nil %}
+			<a href="{{ paginator.next_page_path }}" class="newer">Newer</a>
+		{% else %}
+			<a href="#" class="newer disabled">Newer</a>
+		{% endif %}
+	</div>
 </div>

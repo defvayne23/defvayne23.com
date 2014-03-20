@@ -1,6 +1,8 @@
 name: John Hoover - defvayne23.com
 markdown: redcarpet
 pygments: true
+paginate: 8
+paginate_path: "page_:num"
 exclude: [node_modules, public_html]
 permalink: /:year/:month/:day/:title
 excerpt_separator: <!-- /excerpt -->
