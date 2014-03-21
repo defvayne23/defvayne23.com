@@ -15,7 +15,7 @@
 	<meta property="og:title" content="{{ page.title }}">
 	<meta property="og:url" content="{{ site.domain }}{{ page.url }}/">
   {% if page.excerpt %}
-    <meta property="og:description" content="{{ page.excerpt | strip_html }}">
+    <meta property="og:description" content="{{ page.excerpt | strip_html | strip_newlines }}">
   {% else %}
 	  <meta property="og:description" content="{{ site.description }}">
   {% endif %}
@@ -39,7 +39,7 @@
   <meta name="twitter:title" content="{{ page.title }}">
   <meta name="twitter:description" content="{{ site.description }}">
   {% if page.excerpt %}
-    <meta name="twitter:description" content="{{ page.excerpt | strip_html }}">
+    <meta name="twitter:description" content="{{ page.excerpt | strip_html | strip_newlines }}">
   {% else %}
     <meta name="twitter:description" content="{{ site.description }}">
   {% endif %}
