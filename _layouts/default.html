@@ -33,6 +33,22 @@
 		<meta property="article:tag" content="{{ tag }}">
 	{% endfor %}
 
+  <!-- Twitter Meta Data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="{{ site.domain }}{{ page.url }}/">
+  <meta name="twitter:title" content="{{ page.title }}">
+  <meta name="twitter:description" content="{{ site.description }}">
+  {% if page.excerpt %}
+    <meta name="twitter:description" content="{{ page.excerpt | strip_html }}">
+  {% else %}
+    <meta name="twitter:description" content="{{ site.description }}">
+  {% endif %}
+  {% if page.image != nil %}
+    <meta name="twitter:image" content="{{ site.domain }}{{ page.image }}">
+  {% else %}
+    <meta name="twitter:image" content="{{ site.domain }}/images/profile_image.jpg">
+  {% endif %}
+
 	<title>{{ page.title }} - Defvayne23.com</title>
 
 	<link rel="canonical" href="{{ site.domain }}{{ page.url }}/" />
