@@ -1,5 +1,5 @@
 ---
-author: admin
+author: John Hoover
 comments: true
 date: 2010-05-11 20:31:09+00:00
 layout: post
@@ -60,7 +60,7 @@ if ($_SERVER["HTTP_IF_MODIFIED_SINCE"] == gmdate("D, d M Y H:i:s", filemtime($sF
 	header("ETag: ".md5($sFile));
 	exit;
 }
- 
+
 // Load image
 switch($sType)
 {
@@ -69,19 +69,19 @@ switch($sType)
 	case IMAGETYPE_PNG: $oImage = imagecreatefrompng($sFile); break;
 	default: die("Image type not found");
 }
- 
+
 $sCropOffsetX = 148;
 $sCropOffsetY = 119;
 $sCropWidth = 350;
 $sCropHeight = 275;
- 
+
 $oCrop = imagecreatetruecolor($sCropWidth, $sCropHeight);
 imagefill($oCrop, 0, 0, imagecolorallocate($oCrop, 255, 255, 255));
- 
+
 // Crop image onto canvas
 imagecopyresized($oCrop, $oImage, 0, 0, $sCropOffsetX, $sCropOffsetY, $sWidth, $sHeight, $sWidth, $sHeight);
 imagedestroy($oImage);
- 
+
 $sMime = image_type_to_mime_type($aInfo);
 header("Content-type: ".$sMime);
 header("Last-Modified: ".gmdate("D, d M Y H:i:s", filemtime($sFile))." GMT");
@@ -89,7 +89,7 @@ header("Pragma: public");
 header("Cache-Control: maxage=".(60*60*24*2));
 header("Expires: ".gmdate("D, d M Y H:i:s", strtotime("+2 days"))." GMT");
 header("ETag: ".md5($sFile));
- 
+
 switch($sType)
 {
 	case IMAGETYPE_JPEG: imagejpeg($oCrop); break;

@@ -1,5 +1,5 @@
 ---
-author: admin
+author: John Hoover
 comments: true
 date: 2010-05-07 14:30:46+00:00
 layout: post
@@ -27,7 +27,7 @@ $.jTube({
 });
 </script>
 {% endhighlight %}
-    
+
 <!-- /excerpt -->
 
 With the above code jTube gathers the users 'defvayne23' (me) uploads. But nothing is shown. We have to pass a success function so we can use the videos. The success function is passed two variables, videos and number of pages. The videos variable contains an array of videos, each containing info about that video.
@@ -58,7 +58,7 @@ $.jTube({
             videoHTML += this.title;
             videoHTML += '</a> - '+this.length;
             videoHTML += '</li>';
-            
+
             $('#myVideos').append(videoHTML);
         });
     }
@@ -92,7 +92,7 @@ $.jTube({
             videoHTML += this.title;
             videoHTML += '</a> - '+this.length;
             videoHTML += '</li>';
-            
+
             $('#myVideos').append(videoHTML);
         });
     },

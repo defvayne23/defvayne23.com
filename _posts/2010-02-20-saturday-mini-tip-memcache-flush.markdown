@@ -1,5 +1,5 @@
 ---
-author: admin
+author: John Hoover
 comments: true
 date: 2010-02-20 19:26:39+00:00
 layout: post
@@ -15,7 +15,7 @@ tags:
 
 {% highlight php %}
 $oMemcache->flush();
- 
+
 // Wait for memcache to finish flushing
 $time = time()+1; //one second future
 while(time() < $time) {

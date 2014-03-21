@@ -1,5 +1,5 @@
 ---
-author: admin
+author: John Hoover
 comments: true
 date: 2011-04-22 13:30:08+00:00
 layout: post

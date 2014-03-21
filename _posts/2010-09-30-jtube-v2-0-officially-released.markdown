@@ -1,5 +1,5 @@
 ---
-author: admin
+author: John Hoover
 comments: true
 date: 2010-09-30 13:40:18+00:00
 layout: post
@@ -41,7 +41,7 @@ $.jTube({
 {% endhighlight %}
 
 ### Get the latest jTube
-	
+
   * [GitHub](https://github.com/defvayne23/jTube/tags)
   * [jQuery Plugins](http://plugins.jquery.com/project/jTube)
 

@@ -1,5 +1,5 @@
 ---
-author: admin
+author: John Hoover
 comments: true
 date: 2010-05-12 17:43:45+00:00
 layout: post
@@ -29,7 +29,7 @@ var options = {
             videoHTML += this.title;
             videoHTML += '</a> - '+this.length;
             videoHTML += '</li>';
-            
+
             $('#myVideos').append(videoHTML);
         });
     },
@@ -81,7 +81,7 @@ Now we have a page that shows 12 videos with two dead links for paging. Lets add
 {% highlight javascript %}
         $('#myVideos').append(videoHTML);
     });
-    
+
     //Next
     if(currentPage < numberPages) {
         $('#pageNext').removeClass('disabled').unbind('click').click(function(event) {
@@ -101,7 +101,7 @@ Since we use append to add the videos, clicking next adds the next page to the p
 {% highlight javascript %}
 success: function(videos, numberPages) {
     $('#myVideos').html('');
-    
+
     $(videos).each(function() {
 {% endhighlight %}
 
@@ -140,7 +140,7 @@ success: function(videos, numberPages) {
     $('#myVideos').html('');
     $('#currentPage').html(currentPage);
     $('#numberPages').html(numberPages);
-    
+
     $(videos).each(function() {
 {% endhighlight %}
 
@@ -159,17 +159,17 @@ var options = {
         $('#myVideos').html('');
         $('#currentPage').html(currentPage);
         $('#numberPages').html(numberPages);
-        
+
         $(videos).each(function() {
             videoHTML = '<li>';
             videoHTML += '<a href="'+this.link+'" target="_blank">';
             videoHTML += this.title;
             videoHTML += '</a> - '+this.length;
             videoHTML += '</li>';
-            
+
             $('#myVideos').append(videoHTML);
         });
-        
+
         //Back
         if(currentPage != 1) {
             $('#pageBack').removeClass('disabled').unbind('click').click(function(event) {
@@ -181,7 +181,7 @@ var options = {
         } else {
             $('#pageBack').addClass('disabled').unbind('click').click(empty);
         }
-        
+
         //Next
         if(currentPage < numberPages) {
             $('#pageNext').removeClass('disabled').unbind('click').click(function(event) {
