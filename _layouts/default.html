@@ -9,10 +9,12 @@
 	<meta name="description" content="">
 	<meta name="viewport" content="width=450, user-scalable=no">
 
+	<!-- Facebook Meta Data -->
 	<meta property="og:site_name" content="Defvayne23.com">
 	<meta property="og:type" content="article">
 	<meta property="og:title" content="{{ page.title }}">
 	<meta property="og:url" content="{{ site.domain }}{{ page.url }}">
+	<meta property="og:description" content="{{ site.description }}"
 	{% if page.author != nil %}
 		<meta property="article:author" content="{{ page.author }}">
 	{% endif %}
@@ -54,7 +56,7 @@
 			<img src="/images/profile_image.jpg" alt="John Hoover" class="avatar">
 
 			<p>
-				Web devloper in Austin, TX. Consumer of pizza.
+				{{ site.description }}
 			</p>
 
 			<ul>
