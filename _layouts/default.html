@@ -15,9 +15,6 @@
 	<meta property="og:title" content="{{ page.title }}">
 	<meta property="og:url" content="{{ site.domain }}{{ page.url }}">
 	<meta property="og:description" content="{{ site.description }}">
-	{% if page.author != nil %}
-		<meta property="article:author" content="{{ page.author }}">
-	{% endif %}
 	{% if page.date != nil %}
 		<meta property="article:published_time" content="{{ page.date | date: "%Y-%m-%d" }}">
 	{% endif %}
