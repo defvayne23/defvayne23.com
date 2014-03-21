@@ -13,7 +13,7 @@
 	<meta property="og:site_name" content="Defvayne23.com">
 	<meta property="og:type" content="article">
 	<meta property="og:title" content="{{ page.title }}">
-	<meta property="og:url" content="{{ site.domain }}{{ page.url }}">
+	<meta property="og:url" content="{{ site.domain }}{{ page.url }}/">
 	<meta property="og:description" content="{{ site.description }}">
 	{% if page.date != nil %}
 		<meta property="article:published_time" content="{{ page.date | date: "%Y-%m-%d" }}">
@@ -32,7 +32,7 @@
 
 	<title>{{ page.title }} - Defvayne23.com</title>
 
-	<link rel="canonical" href="{{ site.domain }}{{ page.url }}" />
+	<link rel="canonical" href="{{ site.domain }}{{ page.url }}/" />
 
 	<link rel="author" href="humans.txt">
 	<link rel="dns-prefetch" href="//ajax.googleapis.com">
