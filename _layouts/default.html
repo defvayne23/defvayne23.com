@@ -23,9 +23,8 @@
 	{% endif %}
 	{% if page.image != nil %}
 		<meta property="og:image" content="{{ site.domain }}{{ page.image }}">
-	{% else %}
-		<meta property="og:image" content="{{ site.domain }}/images/profile_image.jpg">
 	{% endif %}
+    <meta property="og:image" content="{{ site.domain }}/images/profile_image.jpg">
 	{% for tag in page.tags %}
 		<meta property="article:tag" content="{{ tag }}">
 	{% endfor %}
