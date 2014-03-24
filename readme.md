@@ -1,6 +1,6 @@
 # defvayne23.com
 
-This repo is the home of my blog which is powered by Jekyll and GitHub. The starting point for this site was Jekyll Bootstrap. The design of this blog is to help me learn responsive design and to be simpler than what I had before.
+This repo is the home of my blog which is powered by Jekyll. The starting point for this site was Jekyll Bootstrap. The design of this blog is to help me learn responsive design and to be simpler than what I had before.
 
 ## License
 

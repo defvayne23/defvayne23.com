@@ -4,16 +4,15 @@
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
-<head>
 	<meta charset="utf-8">
-	<meta name="description" content="">
+	<meta name="description" content="{{ site.description }}">
 	<meta name="viewport" content="width=450, user-scalable=no">
 
 	<!-- Facebook Meta Data -->
 	<meta property="og:site_name" content="Defvayne23.com">
 	<meta property="og:type" content="article">
 	<meta property="og:title" content="{{ page.title }}">
-	<meta property="og:url" content="{{ site.domain }}{{ page.url }}/">
+	<meta property="og:url" content="{{ site.domain }}{% if page.url != '/index.html' %}{{ page.url }}{% endif %}/">
   {% if page.excerpt %}
     <meta property="og:description" content="{{ page.excerpt | strip_html | strip_newlines }}">
   {% else %}
@@ -37,9 +36,8 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@defvayne23">
   <meta name="twitter:domain" content="{{ site.domain }}">
-  <meta name="twitter:url" content="{{ site.domain }}{{ page.url }}/">
+  <meta name="twitter:url" content="{{ site.domain }}{% if page.url != '/index.html' %}{{ page.url }}{% endif %}/">
   <meta name="twitter:title" content="{{ page.title }}">
-  <meta name="twitter:description" content="{{ site.description }}">
   {% if page.excerpt %}
     <meta name="twitter:description" content="{{ page.excerpt | strip_html | strip_newlines }}">
   {% else %}
@@ -53,10 +51,11 @@
 
 	<title>{{ page.title }} - Defvayne23.com</title>
 
-	<link rel="canonical" href="{{ site.domain }}{{ page.url }}/" />
+	<link rel="canonical" href="{{ site.domain }}{% if page.url != '/index.html' %}{{ page.url }}{% endif %}/" />
 
 	<link rel="author" href="humans.txt">
 	<link rel="dns-prefetch" href="//ajax.googleapis.com">
+	<link rel="alternate" type="application/rss+xml" title="Post Feed" href="/rss.xml">
 
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -65,7 +64,7 @@
 	<link rel="stylesheet" href="/css/highlight.css?v=3">
 	<script src="/js/custom.modernizr.js"></script>
 </head>
-<body>
+<body{% if page.title != nil %} class="{{ page.title | downcase | replace:' ','_' }}"{% endif %}>
 	<div class="container">
 		<div id="navigation">
 			<h1><a href="/">John Hoover</a></h1>

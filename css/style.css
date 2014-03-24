@@ -1572,7 +1572,7 @@ blockquote p {
 @media print {
   * {
     background: transparent !important;
-    color: #000 !important;
+    color: black !important;
     /* Black prints faster: h5bp.com/s */
     box-shadow: none !important;
     text-shadow: none !important;
@@ -1599,7 +1599,7 @@ blockquote p {
 
   pre,
   blockquote {
-    border: 1px solid #999;
+    border: 1px solid #999999;
     page-break-inside: avoid;
   }
 
@@ -3944,7 +3944,7 @@ label.error {
   margin-top: -20px;
   margin-left: -20px;
   border: solid 3px;
-  border-color: #555 #fff;
+  border-color: #555555 white;
   -webkit-border-radius: 1000px;
   border-radius: 1000px;
   -webkit-animation-name: rotate;
@@ -4035,7 +4035,7 @@ label.error {
   right: 0px;
   width: 11px;
   height: 14px;
-  border: solid 4px #000;
+  border: solid 4px black;
   border-top: none;
   border-bottom: none;
 }
@@ -4046,7 +4046,7 @@ label.error {
   height: 14px;
   border: inset 8px;
   border-right-style: solid;
-  border-color: transparent transparent transparent #000;
+  border-color: transparent transparent transparent black;
 }
 .orbit-container:hover .orbit-timer > span {
   display: block;
@@ -4233,7 +4233,7 @@ label.error {
 }
 @media print {
   .reveal-modal {
-    background: #fff !important;
+    background: white !important;
   }
 }
 /* Foundation Joyride */
@@ -4344,10 +4344,10 @@ label.error {
   text-decoration: none;
   font-size: 30px;
   font-weight: normal;
-  line-height: .5 !important;
+  line-height: 0.5 !important;
 }
 .joyride-close-tip:hover, .joyride-close-tip:focus {
-  color: #eee !important;
+  color: #eeeeee !important;
 }
 
 .joyride-modal-bg {
@@ -4368,9 +4368,9 @@ label.error {
   position: absolute;
   border-radius: 3px;
   z-index: 102;
-  -moz-box-shadow: 0px 0px 30px #ffffff;
-  -webkit-box-shadow: 0px 0px 15px #ffffff;
-  box-shadow: 0px 0px 15px #ffffff;
+  -moz-box-shadow: 0px 0px 30px white;
+  -webkit-box-shadow: 0px 0px 15px white;
+  box-shadow: 0px 0px 15px white;
 }
 
 .joyride-expose-cover {
@@ -5862,44 +5862,6 @@ h3 a {
 #content {
   position: relative;
 }
-#content article {
-  border-radius: 10px;
-  background: #fff;
-  margin-left: 30px;
-  margin-bottom: 20px;
-  padding: 20px;
-  color: #666;
-}
-#content article a {
-  color: #296AA3;
-}
-#content #home .posts {
-  list-style-type: none;
-  margin-left: 0;
-}
-#content #home .posts .post {
-  position: relative;
-  border-bottom: 1px solid #5797CF;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-}
-#content #home .posts .post .category {
-  position: absolute;
-  width: 30px;
-  height: 100%;
-  padding: 0;
-  margin: 0;
-}
-#content #home .posts .post .category div {
-  -moz-transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-#content #home .posts .post .post_container {
-  margin-left: 50px;
-}
 
 @media only screen and (min-width: 880px) {
   #content {
@@ -5912,6 +5874,34 @@ h3 a {
     width: 950px;
   }
 }
+.home .posts {
+  list-style-type: none;
+  margin-left: 0;
+}
+.home .posts .post {
+  position: relative;
+  border-bottom: 1px solid #5797cf;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+.home .posts .post .category {
+  position: absolute;
+  width: 30px;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+.home .posts .post .category div {
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.home .posts .post .post_container {
+  margin-left: 50px;
+}
+
 .category {
   padding: 10px;
   margin-bottom: 20px;
@@ -5948,7 +5938,7 @@ h3 a {
   float: left;
   margin-left: 10px;
   padding-left: 10px;
-  border-left: 1px solid #5797CF;
+  border-left: 1px solid #5797cf;
 }
 .post_container .post_image {
   width: 100%;
@@ -5989,15 +5979,15 @@ h3 a {
 .pagination a:hover {
   text-decoration: underline;
 }
-.pagination .older {
+.pagination .newer {
   float: left;
 }
-.pagination .newer {
+.pagination .older {
   float: right;
 }
 
 .archive .archive_year {
-  border-left: 1px solid #296AA3;
+  border-left: 1px solid #296aa3;
   margin-left: 10px;
   padding-left: 15px;
 }

@@ -1,0 +1,13 @@
+/* TEAM */
+Your title: John Hoover
+Twitter: @defvayne23
+Location: Austin, TX
+
+/* THANKS */
+Name: James Fleeting
+Site: iwasasuperhero.com
+Twitter: @fleetingftw
+
+/* SITE */
+Components: Modernizr, jQuery, Highlight
+Software: Atom, Jekyll, Grunt
