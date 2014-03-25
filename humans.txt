@@ -1,5 +1,5 @@
 /* TEAM */
-Your title: John Hoover
+Blogger: John Hoover
 Twitter: @defvayne23
 Location: Austin, TX
 
