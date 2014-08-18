@@ -8,12 +8,15 @@ Born and raised Texan. Lived in the Wichita Falls area most of my life. Graduate
 
 ####What I'm Doing Now
 
-#####Cambia Information Group
-March 2012 - Current
-
-Design and implement new features for a Ruby on Rails web app. Write tests for features I added and bugs that I fixed. Worked with Mondrian to create cubes and write MDX queries. Use Rubymine to develop and debug code.
+#####Monkee-Boy Web Design, Inc.
+July 2014 - Current
 
 ####Where I Have Worked
+
+  * #####Cambia Information Group
+    March 2012 - July 2014
+
+    Design and implement new features for a Ruby on Rails web app. Write tests for features I added and bugs that I fixed. Worked with Mondrian to create cubes and write MDX queries. Use Rubymine to develop and debug code.
 
   * #####Apple, Inc. (Contractor)
     April 2011 - March 2012
