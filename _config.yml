@@ -45,3 +45,6 @@ social:
 - name: Instagram
   url: http://instagram.com/defvayne23
   image: /images/social/instagram_32.png
+- name: Twitch
+  url: http://www.twitch.tv/defvayne23
+  image: /images/social/twitch_32.png
