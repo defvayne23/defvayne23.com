@@ -1,0 +1,27 @@
+---
+author: John Hoover
+comments: true
+date: 2014-11-20 20:06:00+00:00
+layout: post
+slug: twitch
+title: 'Twitch'
+category: Personal
+tags:
+- Twitch
+- Video Games
+image: /images/posts/twitch/Twitch.jpg
+---
+
+If you follow me on [Twitter](https://twitter.com/defvayne23) or [Facebook](https://www.facebook.com/defvayne23), you may have seen that I have recently started streaming me play games on [Twitch](http://www.twitch.tv/defvayne23). This is something I plan to do more of. Any time I play games.
+
+When I first heard of Twitch, I didn’t know what to think. At first I was curious why someone would watch another person play games. Why not play the game yourself? Why not get your own achievements? After that initial experience with it, I had forgotten about it. After Amazon bought it, I gave it another look. That’s when I found games I wasn’t interested in playing, but had fun watching. Then I picked up on the social aspect of it. Communicating with the player and other viewers. Later I found myself watching games when I couldn’t be playing them.
+
+<!-- /excerpt -->
+
+With this recent wave of bad games I have found another use for Twitch. Why read reviews when you can make your own review by watching someone else play. Most games don’t have a demo to see if you would like the game. For instance, The Evil Within wasn’t really on my radar of games to get. One night I saw it in the list of games and decided to watch someone. I saw the look of the game, the mechanics, and bits of the story. This drew me to the game causing me to decide to get it for myself so I can see it from start to finish. When I started playing I decided I would use the PS4 share functionality and stream to Twitch myself. Now not only did I have people in the room talking about the game with me, but also other friends chatting over Twitch. This got me to setup my PC to stream to Twitch as well. Was painless to setup. Now anytime I hop into a game I stream it.
+
+This all got me thinking, “What could I do to find my place on Twitch to pull in viewers?” That’s when web development came to mind. I have seen people streaming game development, so why not web development? I would stream myself working on my side projects. This would allow anyone to watch and either contribute or learn from my work. It’s like pair programming, but not over my shoulder. I could talk about what I’m doing and this would help help me and the viewers. [(Rubber Duck Debugging)](https://en.wikipedia.org/wiki/Rubber_duck_debugging) I have thought about monetizing it. No one would be required to pay money to watch, but if they wanted to help it would be there. If possible, I would even turn off ads.
+
+I do still have issues with Twitch. It’s talking to myself. To make my stream more desirable to the viewers it requires me to talk to myself. I hardly talk, let alone to myself. Maybe this will fix that.
+
+**[Follow me on Twitch](http://www.twitch.tv/defvayne23)**
