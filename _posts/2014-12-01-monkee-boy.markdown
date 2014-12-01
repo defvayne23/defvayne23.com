@@ -1,7 +1,7 @@
 ---
 author: John Hoover
 comments: true
-date: 2014-11-22 20:06:00+00:00
+date: 2014-12-01 20:06:00+00:00
 layout: post
 slug: monkee-boy
 title: 'Monkee-Boy: It was bound to be written sooner or later'
