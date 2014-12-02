@@ -18,6 +18,6 @@ My first day was July 7th, 2014. It’s been a fun ride since then. I went from 
 
 <!-- /excerpt -->
 
-It’s been an awesome ride so far. Having something other than the same task every week to work on. Working with one of the best teams in Austin. My favorite part? Not taking direct calls and emails from clients. (Check out Submit a Ticket) In previous jobs I have either only related with some or no co-workers at all. I feel I can relate with everyone. For instance, last week we had a Team Fortress lan party. Almost everyone was playing for the first time, but they had fun. I was accused of cheating because I had good gear from playing so much.
+It’s been an awesome ride so far. Having something other than the same task every week to work on. Working with one of the best teams in Austin. My favorite part? Not taking direct calls and emails from clients. In previous jobs I have either only related with some or no co-workers at all. I feel I can relate with everyone. For instance, week before last we had a Team Fortress 2 lan party. Almost everyone was playing for the first time, but they had fun. I was accused of cheating because I had good gear from playing so much.
 
 2014 is starting to wrap up. I look forward to what 2015 brings for Monkee-Boy and I. To continue growing as a developer with the team. James Fleeting hopes to leave Texas late in the year. Hopefully I can rise to the occasion and step into his role.
